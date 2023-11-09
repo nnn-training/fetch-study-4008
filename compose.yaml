@@ -6,4 +6,4 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - .:/ajax-study-4008
+      - .:/fetch-study-4008
