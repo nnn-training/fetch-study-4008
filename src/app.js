@@ -16,6 +16,7 @@ const layout = require("./layout");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const photosRouter = require("./routes/photos");
+const serverStatusRouter = require('./routes/server-status');
 
 const app = new Hono();
 
@@ -78,6 +79,7 @@ app.get("/logout", (c) => {
 app.route("/", indexRouter);
 app.route("/users", usersRouter);
 app.route("/photos", photosRouter);
+app.route("/server-status",serverStatusRouter);
 
 app.notFound((c) => {
   return c.html(
